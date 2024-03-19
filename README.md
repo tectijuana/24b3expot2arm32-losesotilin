@@ -28,3 +28,29 @@ Estos registros contienen información sobre el estado actual del procesador, in
 - Registros de dirección superior e inferior (R0-R15):
 Se puede acceder a estos registros utilizando sus direcciones superior e inferior, lo que permite transferencias de datos y operaciones de memoria eficientes.
 
+## EJEMPLOS
+
+- R0-R3: Registros de propósito general comúnmente utilizados para operaciones aritméticas y lógicas.
+Ejemplo: ADD R0, R1, R2 (R0 = R1 + R2)
+
+- R4-R11: Registros de propósito general, a menudo utilizados para almacenar variables locales y direcciones de memoria.
+Ejemplo: LDR R5, [R6] (Cargar el valor de la memoria apuntada por R6 en R5)
+
+- R12: Registro de propósito general, comúnmente utilizado como registro temporal.
+Ejemplo: MOV R12, R0 (Mover el valor de R0 a R12 para su uso posterior)
+
+- R13 (SP): Registro del puntero de pila, utilizado para operaciones de pila.
+Ejemplo: PUSH {R0-R3} (Empujar los valores de R0-R3 en la pila)
+         SUB SP, SP, #16 (Ajustar el puntero de pila para reservar espacio en la pila)
+
+- R14 (LR): Registro de enlace, utilizado para almacenar direcciones de retorno.
+Ejemplo: BL función (Llamar a una función, la dirección de retorno se almacena en LR)
+
+- R15 (PC): Contador de programa, apunta a la siguiente instrucción a ejecutar.
+Ejemplo: LDR PC, [R0] (Cargar una nueva dirección desde R0 en el PC, cambiando el flujo de ejecución)
+
+- CPSR: Registro de estado del programa actual, contiene banderas de condición y bits de control.
+Ejemplo: MRS R0, CPSR (Mover el valor del CPSR a R0 para su inspección)
+
+Espero que estos ejemplos más específicos y prácticos sean útiles para comprender mejor el uso de los registros en ARM.
+
