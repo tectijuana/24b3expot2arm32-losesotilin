@@ -1,7 +1,5 @@
 # 3. Uso de registros y convenciones de llamadas
 
-Esta imagen proporciona información detallada sobre los diferentes tipos de registros en la arquitectura ARM de 32 bits (ARM32) y cómo se utilizan para pasar argumentos y almacenar valores de retorno. Aquí hay un resumen de los puntos clave:
-
 Tipos de registros:
 - Registros de propósito general (R0-R7, R8-R10)
 - Registros especializados (R11-R15): puntero de pila, puntero de enlace, puntero de instrucción, contador de programa
