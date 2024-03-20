@@ -53,8 +53,8 @@ Ejemplo: LDR PC, [R0] (Cargar una nueva dirección desde R0 en el PC, cambiando 
 Ejemplo: MRS R0, CPSR (Mover el valor del CPSR a R0 para su inspección)
 
 Espero que estos ejemplos más específicos y prácticos sean útiles para comprender mejor el uso de los registros en ARM.
-https://www.canva.com/design/DAGABZSWH0A/-FmO4fJx1GAH0NfZPU6kmQ/view?utm_content=DAGABZSWH0A&utm_campaign=designshare&utm_medium=link&utm_source=editor
-### <a href="(https://www.canva.com/design/DAGABZSWH0A/-FmO4fJx1GAH0NfZPU6kmQ/view?utm_content=DAGABZSWH0A&utm_campaign=designshare&utm_medium=link&utm_source=editor)"> CLICK AQUI PARA IR A LA PRESENTACION</a>
+
+### <a href="https://www.canva.com/design/DAGABZSWH0A/-FmO4fJx1GAH0NfZPU6kmQ/view?utm_content=DAGABZSWH0A&utm_campaign=designshare&utm_medium=link&utm_source=editor"> CLICK AQUI PARA IR A LA PRESENTACION</a>
 ![Captura de pantalla 2024-03-20 143556](https://github.com/tectijuana/24b3expot2arm32-losesotilin/assets/158230339/d093f91b-34e8-495c-8230-c9c333ab6bf6)
 ![Captura de pantalla 2024-03-20 143619](https://github.com/tectijuana/24b3expot2arm32-losesotilin/assets/158230339/5462c0f8-c0e9-4f1f-8436-43574f137806)
 ![Captura de pantalla 2024-03-20 143628](https://github.com/tectijuana/24b3expot2arm32-losesotilin/assets/158230339/23f88909-83b7-442e-ae1e-61a7991239de)
