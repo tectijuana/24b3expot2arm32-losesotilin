@@ -54,6 +54,65 @@ Ejemplo: MRS R0, CPSR (Mover el valor del CPSR a R0 para su inspección)
 
 Espero que estos ejemplos más específicos y prácticos sean útiles para comprender mejor el uso de los registros en ARM.
 
+## Código de la práctica
+### Código del ensamblador (ARM32)
+```asm
+.section .text
+.global fib3
+
+fib3:
+    push {r4-r7, lr} ; Almacena valores en la pila
+    mov  r4, r0      ; Asigna el valor de entrada en r4
+    mov  r1, #0      ; Primer número de Fibonacci
+    mov  r2, #1      ; Segundo número de Fibonacci
+
+    cmp  r4, #0      ; Comprueba si la entrada es un 0 o no
+    beq  fibExit     ; Si es 0, se manda directo al final del programa
+
+fibLoop:
+    sub  r4, r4, #1  ; Equivalente de DEC, el contador
+    cmp  r4, #0      ; Comprueba si ya se llegó a 0 o no
+    ble  fibExit     ; Si es que sí, se salta al final del programa
+
+    add  r3, r1, r2  ; Suma para el siguiente número de Fibonacci
+    mov  r1, r2      ; Asigna el valor previo a r1
+    mov  r2, r3      ; Asigna el valor actual a r2
+
+    b    fibLoop     ; Regreso al inicio del bucle
+
+fibExit:
+    mov  r0, r1      ; Se devuelve el último valor (Si se llamó desde el inicio, será un cero)
+    pop  {r4-r7, pc} ; Se restauran los valores de los registros
+```
+### Código de C
+```c
+#include <stdio.h>
+
+// Declarar el uso de ensamblador en C
+extern int fib3(int x);
+
+int main()
+{
+    // Variable para el tope de la secuencia
+    int tope;
+    printf("Inserte valores a mostrar de la secuencia de Fibonacci (y un cero adicional): ");
+    scanf("%d", &tope);
+
+    printf("Valores de la secuencia: ");
+    // Ciclo para imprimir en pantalla los valores
+    // Fue más fácil que imprimir desde ensamblador
+    for (int i = 0; i <= tope; i++)
+    {
+        printf("%d ", fib3(i));
+    }
+
+    // Fin del programa
+    printf("\nListo");
+
+    return 0;
+}
+```
+
 ### <a href="https://www.canva.com/design/DAGABZSWH0A/-FmO4fJx1GAH0NfZPU6kmQ/view?utm_content=DAGABZSWH0A&utm_campaign=designshare&utm_medium=link&utm_source=editor"> CLICK AQUI PARA IR A LA PRESENTACION</a>
 ![Captura de pantalla 2024-03-20 143556](https://github.com/tectijuana/24b3expot2arm32-losesotilin/assets/158230339/d093f91b-34e8-495c-8230-c9c333ab6bf6)
 ![Captura de pantalla 2024-03-20 143619](https://github.com/tectijuana/24b3expot2arm32-losesotilin/assets/158230339/5462c0f8-c0e9-4f1f-8436-43574f137806)
